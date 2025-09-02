@@ -6,6 +6,7 @@
     <link rel="icon" href="/site-cocreate/img/icon.png" >
     <link rel="stylesheet" href="css/style1.css">
 
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +14,11 @@
 
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
 
-
+<!-- JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    
     <title>CoCreate</title>
 </head>
 <body>
@@ -211,36 +215,101 @@
         </div>
     </section>
     <!-- Coloca o portifolio aqui abaixo  -->
-    <section class="feedback">
-        <div class="slide-conteiner">
-            <div class="slide-content">
 
-                <div class="carde-wrapper">
-                    <div class="carde">
-                        <div class="image-content">
-                            <span class="ovelay"></span>
+<section class="feedback">
+    <div class="section-header">
+        <h1>Feedback dos <span class="highlight">nossos clientes</span></h1>
+        <p>Descubra o impacto real do nosso trabalho através das vozes de quem mais importa: nossos clientes!</p>
+    </div>
 
-                            <div class="carde-image">
-                                <img src="/img/@paquetamoveis.png" alt="" class="carde-img">
-                            </div>
+    <div class="carousel-container">
+        
+        <div class="espaco">    
+            <div class="carousel-wrapper" id="carouselWrapper">
+                <div class="carde">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="carde-image">
+                            <img src="img/mulher.jpg" alt="Patricia Freitas" class="carde-img">
                         </div>
-
-                        <div class="carde-content">
-                            <h2 class="name">Patricia Coutinho</h2>
-                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit hic dolorem, aliquam laborum voluptatibus obcaecati nihil officia enim quo sint sapiente veritatis perspiciatis illum voluptate magni sit natus numquam excepturi. </p>
-                        </div>
-
                     </div>
-                </div> 
+                    <h3>Patricia Freitas</h3>
+                    <h5>@Paqueta Móveis</h5>
+                    <p>The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                    <img src="img/@paquetamoveis.png" alt="Logo" class="logo-content">
+                </div>
 
+                <div class="carde">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="carde-image">
+                            <img src="img/file.png" alt="Maria Silva" class="carde-img">
+                        </div>
+                    </div>
+                    <h3>Itinho</h3>
+                    <h5>@Atacamix</h5>
+                    <p>The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                    <img src="img/logo-atacamix.png" alt="Logo" class="logo-content">
+                </div>
+
+                <div class="carde">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="carde-image">
+                            <img src="img/file.png" alt="Ana Paula" class="carde-img">
+                        </div>
+                    </div>
+                    <h3>Ana Paula</h3>
+                    <h5>@Brasa Cosméticos</h5>
+                    <p>The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                    <img src="img/@paquetamoveis.png" alt="Logo" class="logo-content">
+                </div>
+
+                <div class="carde">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="carde-image">
+                            <img src="img/file.png" alt="Carlos Santos" class="carde-img">
+                        </div>
+                    </div>
+                    <h3>Carlos Santos</h3>
+                    <h5>@Digital Marketing</h5>
+                    <p>The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                    <img src="img/@paquetamoveis.png" alt="Logo" class="logo-content">
+                </div>
+
+                <div class="carde">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="carde-image">
+                            <img src="img/file.png" alt="Pedro Lima" class="carde-img">
+                        </div>
+                    </div>
+                    <h3>Pedro Lima</h3>
+                    <h5>@Creative Agency</h5>
+                    <p>The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                    <img src="img/@paquetamoveis.png" alt="Logo" class="logo-content">
+                </div>
+            </div>
+
+            <div class="indicators" id="indicators">
+                <span class="indicator active" onclick="goToSlide(0)"></span>
+                <span class="indicator" onclick="goToSlide(1)"></span>
+                <span class="indicator" onclick="goToSlide(2)"></span>
+                <span class="indicator" onclick="goToSlide(3)"></span>
+                <span class="indicator" onclick="goToSlide(4)"></span>
             </div>
         </div>
-    </section>
+
+    </div>    
+</section>
+
+          
     <!-- colocar o formulario abaixo desse comentario -->
 
-    </section>
+   
 
-     <footer class="main-footer">
+    <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-section company-info">
                 <img src="/img/logo_Cc.png" alt="Logo Cocreate" class="footer-logo">
@@ -342,5 +411,13 @@
             }
         });
     </script>
+
+    <!-- link js pasta -->
+    <script src="js/script.js"></script>
+
+    
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </body>
 </html>
