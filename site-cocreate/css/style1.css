@@ -8,8 +8,8 @@
     font-family: "Poppins", sans-serif;
 }
 body {
-    background-color: rgb(255, 255, 255);
-
+    /* background-color: rgb(255, 255, 255); */
+    background-color: #efefef;
 }
 a {
     text-decoration: none;
@@ -602,51 +602,185 @@ section.como-funciona {
 /* ===========================================================
     FEEDBACK STYLES
     =========================================================== */
-section.feedback {
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
+
+section.feedback {  /* body do video */
+    padding: 80px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.section-header {
+    padding: 0 40px;
+    text-align: left;
+    margin-bottom: 50px;
+    position: relative;
+}
+.section-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+.section-header .highlight {
+    color: #0206ff;
+}
+.section-header p {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 600px;
     
 }
-.feedback .carde {
-    width: 320px;
+.espaco {
+    margin: 40px 50px;
+    padding-bottom: 10px;
+    overflow: hidden;   
+}
+.carousel-container {
+    position: relative;
+    max-width: 1270px;
+    padding: 0 40px;
+    overflow: hidden;
+}
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    
+}
+.carde {
+    height: 100%;
+    min-width: 350px;
+    margin-right: 20px;
+    background: white;
     border-radius: 25px;
-    background-color: #dedfdf; 
-
-} 
-.feedback .image-content,
-.carde-image {
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.image-content {
+    row-gap: 5px;
+    height: 160px;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 14px;
-
-}
-.feedback .carde-image {
+    padding: 20px 14px;
     position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: #FFF;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #003cff;
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #003cff;
+}
+.overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: #fff;
+}
+.carde-image {
+    position: relative;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;    
+    background: #fff;
     padding: 3px;
 }
-.feedback .carde-image .carde-img {
+.carde-image .carde-img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #0052D4;
+    border: 4px solid #003cff; 
+}
+.carde h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c3e50;
+    padding: 25px 20px 0 20px;
+    line-height: 30px;
+}
+.carde h5 {
+    font-weight: 500;
+    color: #2c3e50;
+    padding-bottom: 20px;
+}
+.carde p {
+    font-size: 14px;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    padding: 0 20px;
+}
+.logo-content {
+    width: 90px;
+    height: 90px;
+}
+.indicators {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 30px;
+}
+.indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #4F7AFF;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.indicator.active {
+    background: #4F7AFF;
+    opacity: 1;
+    transform: scale(1.2);
+}
+.indicator:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+    .section-header h1 {
+        font-size: 32px;
+    }
 
+    .header-arrows {
+        position: static;
+        justify-content: center;
+        margin-top: 20px;
+    }
 
-
-
-
-
-
-
-
+    .carde {
+        min-width: 280px;
+        margin-right: 20px;
+    }
+    
+    .nav-arrow {
+        font-size: 24px;
+    }
+    
+    .nav-arrow.prev {
+        left: -60px;
+    }
+    
+    .nav-arrow.next {
+        right: -60px;
+    }
+}
 
 /* ===========================================================
     FOOTER STYLES
